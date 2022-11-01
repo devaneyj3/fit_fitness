@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fitfitnessadmin-dev-195120-authRole",
+      "UnauthRoleArn": "arn:aws:iam::516584575912:role/amplify-fitfitnessadmin-dev-195120-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::516584575912:role/amplify-fitfitnessadmin-dev-195120-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-fitfitnessadmin-dev-195120-deployment",
+      "UnauthRoleName": "amplify-fitfitnessadmin-dev-195120-unauthRole",
+      "StackName": "amplify-fitfitnessadmin-dev-195120",
+      "StackId": "arn:aws:cloudformation:us-east-1:516584575912:stack/amplify-fitfitnessadmin-dev-195120/ec2f9df0-5976-11ed-abd0-0a3e393988e5",
+      "AmplifyAppId": "d3qei24sr8xy1p"
+    },
+    "categories": {
+      "auth": {
+        "FitFitnessAdmin": {}
+      }
+    }
+  }
+}
