@@ -42,6 +42,7 @@ export declare class Class {
   readonly ClassEnrolls?: (ClassEnrolls | null)[] | null;
   readonly instructorID: string;
   readonly users?: (UserClass | null)[] | null;
+  readonly date: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Class, ClassMetaData>);
@@ -56,6 +57,7 @@ export declare class User {
   readonly phone: string;
   readonly photo?: string | null;
   readonly Classes?: (UserClass | null)[] | null;
+  readonly sub: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<User, UserMetaData>);
@@ -70,6 +72,7 @@ export declare class Instructor {
   readonly phone: string;
   readonly photo?: string | null;
   readonly Classes?: (Class | null)[] | null;
+  readonly sub: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Instructor, InstructorMetaData>);
