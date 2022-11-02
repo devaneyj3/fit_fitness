@@ -13,7 +13,12 @@ function MyApp({ Component, pageProps }) {
 		<AuthContextProvider>
 			<Authenticator
 				variation="modal"
-				signUpAttributes={["username", "email", "phone_number", "name"]}>
+				signUpAttributes={[
+					"preferred_username",
+					"email",
+					"phone_number",
+					"name",
+				]}>
 				<Component {...pageProps} />
 			</Authenticator>
 		</AuthContextProvider>
