@@ -32,11 +32,11 @@ const AuthContextProvider = ({ children }) => {
 					username: preferred_username,
 				})
 			);
-			// console.log("newInstructor AuthContext line 32", newInstructor);
+			console.log("newInstructor AuthContext line 32", newInstructor);
 			setDbUser(newInstructor);
 		} else {
 			setDbUser(instructorExists[0]);
-			// console.log("instructorExists AuthContext line 36", instructorExists[0]);
+			console.log("instructorExists AuthContext line 36", instructorExists[0]);
 		}
 	};
 

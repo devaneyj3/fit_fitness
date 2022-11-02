@@ -15,7 +15,7 @@ const AuthContextProvider = ({ children }) => {
 		const user = await Auth.currentAuthenticatedUser({ bypassCache: true });
 
 		const { attributes } = user;
-		const { sub, email, phone_number, name, username } = attributes;
+		const { sub, email, phone_number, name, preferred_username } = attributes;
 
 		const userExists = await DataStore.query(User, (user) =>
 			user.sub("eq", sub)
@@ -24,17 +24,17 @@ const AuthContextProvider = ({ children }) => {
 			const newUser = await DataStore.save(
 				new User({
 					sub,
-					username,
+					username: preferred_username,
 					name,
 					email,
 					phone: phone_number,
 				})
 			);
-			// console.log("newUser AuthContext line 32", newUser);
+			console.log("newUser AuthContext line 32", newUser);
 			setDbUser(newUser);
 		} else {
 			setDbUser(userExists[0]);
-			// console.log("userExist AuthContext line 36", userExists[0]);
+			console.log("userExist AuthContext line 36", userExists[0]);
 		}
 	};
 
