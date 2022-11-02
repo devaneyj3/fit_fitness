@@ -5,15 +5,18 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
 import awsExports from "../src/aws-exports";
+import AuthContextProvider from "../src/context/AuthContext";
 Amplify.configure({ ...awsExports, ssr: true });
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Authenticator
-			variation="modal"
-			signUpAttributes={["username", "email", "phone_number", "name"]}>
-			<Component {...pageProps} />
-		</Authenticator>
+		<AuthContextProvider>
+			<Authenticator
+				variation="modal"
+				signUpAttributes={["username", "email", "phone_number", "name"]}>
+				<Component {...pageProps} />
+			</Authenticator>
+		</AuthContextProvider>
 	);
 }
 

@@ -3,7 +3,7 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "fitfit41cfdc04",
+    "resourceNameTruncated": "fitfit1d030f25",
     "userPoolName": "FitFitnessAdmin",
     "autoVerifiedAttributes": [
       "email"
@@ -27,16 +27,17 @@
     "requiredAttributes": [
       "email",
       "name",
-      "phone_number"
+      "phone_number",
+      "preferred_username"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "FitFit41cfdc04_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "FitFit1d030f25_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "41cfdc04",
+    "sharedId": "1d030f25",
     "resourceName": "FitFitnessAdmin",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",

@@ -141,6 +141,13 @@ export const schema = {
                         "associatedWith": "class"
                     }
                 },
+                "date": {
+                    "name": "date",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -251,6 +258,13 @@ export const schema = {
                         "associatedWith": "user"
                     }
                 },
+                "sub": {
+                    "name": "sub",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -351,6 +365,13 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": "instructorID"
                     }
+                },
+                "sub": {
+                    "name": "sub",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -477,5 +498,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "d4a3b8b0231c02f58939070f1389a738"
+    "version": "b958bae5f680345df79187642b162376"
 };

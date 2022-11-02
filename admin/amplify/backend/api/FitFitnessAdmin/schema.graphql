@@ -12,6 +12,7 @@ type Class @model @auth(rules: [{allow: public}]) {
   ClassEnrolls: [ClassEnrolls] @hasMany(indexName: "byClass", fields: ["id"])
   instructorID: ID! @index(name: "byInstructor")
   users: [User] @manyToMany(relationName: "UserClass")
+  date: AWSDateTime!
 }
 
 type Instructor @model @auth(rules: [{allow: public}]) {
@@ -22,6 +23,7 @@ type Instructor @model @auth(rules: [{allow: public}]) {
   phone: String!
   photo: String
   Classes: [Class] @hasMany(indexName: "byInstructor", fields: ["id"])
+  sub: String!
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -32,4 +34,6 @@ type User @model @auth(rules: [{allow: public}]) {
   phone: String!
   photo: String
   Classes: [Class] @manyToMany(relationName: "UserClass")
+  sub: String!
 }
+ 

@@ -1,20 +1,10 @@
-import { useEffect, useState } from "react";
-
-import { Auth } from "aws-amplify";
+import { useAuthContext } from "../src/context/AuthContext";
 
 function Home() {
-	const [user, setUser] = useState(null);
-	useEffect(() => {
-		const fetchUser = async () => {
-			const userData = await Auth.currentAuthenticatedUser({
-				bypassCache: true,
-			});
-			setUser(userData);
-			console.log(userData);
-		};
-		fetchUser();
-	}, []);
+	const { dbUser } = useAuthContext();
 
-	return <h1>Hello {user && user.attributes.name}</h1>;
+	console.log(dbUser);
+
+	return <h1>Hello {dbUser && dbUser.name}</h1>;
 }
 export default Home;
